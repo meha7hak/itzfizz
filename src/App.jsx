@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import carSvg from './car.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -108,7 +109,7 @@ export default function App() {
                     {/* Green Overlay Bar */}
                     <div
                         ref={greenBarRef}
-                        className="absolute left-0 top-0 bottom-0 bg-[#4ade80] overflow-hidden z-10 w-0 border-r-4 border-emerald-600/50"
+                        className="absolute left-0 top-0 bottom-0 bg-[#059669] overflow-hidden z-10 w-0 border-r-4 border-emerald-400/50"
                     >
                         {/* The Text Revealed within the green overlay */}
                         <div className="absolute left-[5vw] md:left-[10vw] top-0 bottom-0 flex items-center text-[#111111] text-5xl md:text-8xl font-black whitespace-nowrap tracking-widest select-none pb-4">
@@ -120,7 +121,7 @@ export default function App() {
                         ref={carRef}
                         className="absolute left-0 top-1/2 z-20 pointer-events-none"
                     >
-                        <img src="/car.svg" alt="Car" className="w-[200px] md:w-[350px] filter drop-shadow-[0_20px_20px_rgba(0,0,0,0.8)]" />
+                        <img src={carSvg} alt="Car" className="w-[200px] md:w-[350px] filter drop-shadow-[0_20px_20px_rgba(0,0,0,0.8)]" />
                     </div>
 
                 </div>
